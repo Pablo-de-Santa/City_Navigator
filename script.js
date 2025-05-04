@@ -110,6 +110,12 @@ cityTime.addEventListener('transitionend', function() {
   toggleCityButtonsDisabled(false);
 });
 
+window.addEventListener('resize', function() {
+  if (activeButton) {
+    updateSlidingBar(activeButton);
+  }
+});
+
 setInterval(function() {
   updateCityTimeDisplay(false);
 }, 1000);
